@@ -1,0 +1,114 @@
+.search {
+  position: relative;
+  width: 80px;   /* 돋보기 전체 크기 */
+  height: 80px;  /* 돋보기 전체 크기 */
+  margin: 50px auto;
+  margin-top: 100px;
+  margin-left: 200px;
+  left: 70px;
+}
+
+.search .circle {
+  width: 21px;    /* 원의 크기 */
+  height: 21px;   /* 원의 크기 */
+  border: 2px solid white;  /* 테두리 색상과 두께 */
+  border-radius: 50%;       /* 원 모양으로 만듦 */
+  background-color: transparent; /* 배경색 없음 */
+}
+
+/* 돋보기의 손잡이 (아래 막대) */
+.search .handle {
+  position: absolute;
+  width: 15px;    /* 손잡이 너비 */
+  height: 4px;    /* 손잡이 높이 */
+  background-color: white;  /* 손잡이 색상 */
+  top: 22px;      /* 원 아래에 위치하도록 설정 */
+  left: 20px;     /* 돋보기 중앙과 맞추기 */
+  transform: rotate(60deg); /* 손잡이 각도를 60도 기울임 */
+  transform-origin: top left; /* 회전 축을 설정하여 자연스러운 각도로 회전 */
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 2em;
+}
+
+.advertise {
+  background-color: aqua;
+  width: 90%;   /* 고정 너비 대신 비율을 사용 */
+  height: 10vh; /* 화면 높이에 맞추어 조정 */
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  color: red;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.bottom-nav {
+  background-color: rgb(60, 60, 60);
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width: 36.4%;
+  padding: 10px 4px;
+  display: flex;
+  justify-content: space-around; /* 내비게이션 바 아이템들 가로 정렬 */
+  height: 50px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 20px 0 0; /* 상단 양쪽 모서리를 둥글게 설정 */
+}
+
+.bottom-nav a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column; /* 아이콘과 텍스트를 수직으로 배치 */
+  align-items: center;
+  gap: 5px; /* 아이콘과 텍스트 사이의 간격 */
+}
+
+.bottom-nav .icon {
+  font-size: 24px; /* 아이콘 크기 */
+}
+
+/* 모바일 전용 스타일 추가 */
+@media (max-width: 741px) {
+  .advertise {
+      width: 95%; /* 모바일에서 광고가 화면에 맞게 */
+      height: 8vh; /* 높이 조정 */
+  }
+
+  .search {
+      margin-left: 120px;
+      width: 60px;
+      height: 60px;
+  }
+
+  .search .circle {
+      width: 15px; /* 모바일에서 돋보기 크기 축소 */
+      height: 15px;
+  }
+
+  .search .handle {
+      width: 10px;
+      height: 2px;
+  }
+
+  .bottom-nav {
+      width: 100%;
+      height: 60px; /* 모바일에서 하단 네비게이션 크기 확대 */
+  }
+
+  .bottom-nav a {
+      font-size: 12px;
+  }
+}
+  
